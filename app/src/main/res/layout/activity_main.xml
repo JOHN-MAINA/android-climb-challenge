@@ -12,69 +12,95 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#90000000">
+        android:background="#90000000"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal|center_vertical">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/main_title"
-                style="@style/MainTitle"/>
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_title"
+                    style="@style/MainTitle"/>
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/level"
-                style="@style/SubTitles" />
-
-            <RadioGroup
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical">
-                <RadioButton
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/level"
+                    style="@style/LandingSubTitles" />
+
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/medium_level"
-                    style="@style/RadioBtn"/>
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hard_level"
-                    style="@style/RadioBtn"/>
-            </RadioGroup>
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="36dp">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/medium_level"
+                        style="@style/RadioBtn"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hard_level"
+                        style="@style/RadioBtn"/>
+                </RadioGroup>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/marker"
-                style="@style/SubTitles" />
+            </LinearLayout>
 
-            <RadioGroup
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical">
-                <RadioButton
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/marker"
+                    style="@style/LandingSubTitles" />
+
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/x_marker"
-                    style="@style/RadioBtn"/>
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/o_marker"
-                    style="@style/RadioBtn"/>
-            </RadioGroup>
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="36dp">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/x_marker"
+                        style="@style/RadioBtn"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/o_marker"
+                        style="@style/RadioBtn"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/start_button"
-                style="@style/StartBtn"/>
+                style="@style/AppTheme.RoundedCornerMaterialButton"/>
 
         </LinearLayout>
     </ScrollView>
