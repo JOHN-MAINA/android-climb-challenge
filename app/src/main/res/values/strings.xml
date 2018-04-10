@@ -3,10 +3,10 @@
     <string name="main_title">Tic-Tac-Toe</string>
     <string name="level">LEVEL</string>
     <string name="marker">MARKER</string>
-    <string name="medium_level">Medium</string>
-    <string name="hard_level">Hard</string>
-    <string name="x_marker">Use X</string>
-    <string name="o_marker">Use O</string>
+    <string name="medium_level">3 BY 3 board</string>
+    <string name="hard_level">5 by 5 board</string>
+    <string name="x_marker">Use X as marker</string>
+    <string name="o_marker">Use O as marker</string>
     <string name="start_button">START</string>
     <string name="score_board">SCORE BOARD</string>
     <string name="your_score">Your Score 0</string>
