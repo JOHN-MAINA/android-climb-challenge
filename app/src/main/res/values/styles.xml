@@ -25,12 +25,13 @@
         <item name="android:layout_margin">16dp</item>
     </style>
 
-    <style name="RadioBtn" parent="TextAppearance.AppCompat">
+    <style name="RadioBtn" parent="Base.TextAppearance.AppCompat.Button">
         <item name="android:textColor">@color/colorLightPrimary</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">italic</item>
         <item name="android:fontFamily">cursive</item>
         <item name="android:textAlignment">center</item>
+        <item name="android:buttonTint">@color/colorPrimary</item>
     </style>
 
     <style name="StartBtn" parent="TextAppearance.AppCompat">
@@ -43,6 +44,30 @@
         <item name="android:layout_margin">30dp</item>
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:padding">16dp</item>
+    </style>
+
+    <!--<style name="GridCells" parent="">-->
+        <!--<item name="">@color/colorLightPrimary</item>-->
+        <!--<item name="android:textSize">36sp</item>-->
+        <!--<item name="android:textStyle">bold|italic</item>-->
+        <!--<item name="android:fontFamily">cursive</item>-->
+        <!--<item name="android:textAlignment">center</item>-->
+        <!--<item name="android:radius">60dp</item>-->
+        <!--<item name="android:layout_margin">30dp</item>-->
+        <!--<item name="android:background">@color/colorPrimary</item>-->
+        <!--<item name="android:padding">16dp</item>-->
+    <!--</style>-->
+
+    <style name="ScoreText">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="BoardCells">
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:background">#fff</item>
     </style>
 
 </resources>
