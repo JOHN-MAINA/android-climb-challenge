@@ -25,11 +25,11 @@
                 android:background="@color/colorPrimary"
                 android:orientation="vertical">
 
-                <TextView
-                    style="@style/MainTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/main_title" />
+                <!--<TextView-->
+                    <!--style="@style/MainTitle"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/main_title" />-->
 
                 <TextView
                     style="@style/SubTitles"
@@ -78,8 +78,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_1"
+                        <Button
+                            android:id="@+id/button_1"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -92,8 +92,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_2"
+                        <Button
+                            android:id="@+id/button_2"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -106,8 +106,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_3"
+                        <Button
+                            android:id="@+id/button_3"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -120,87 +120,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_4"
-                            style="@style/BoardCell"
-                            android:onClick="onTextViewClicked"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:id="@+id/text_5"
-                            style="@style/BoardCell"
-                            android:onClick="onTextViewClicked"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:id="@+id/text_6"
-                            style="@style/BoardCell"
-                            android:onClick="onTextViewClicked"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:id="@+id/text_7"
-                            style="@style/BoardCell"
-                            android:onClick="onTextViewClicked"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:id="@+id/text_8"
-                            style="@style/BoardCell"
-                            android:onClick="onTextViewClicked"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:id="@+id/text_9"
+                        <Button
+                            android:id="@+id/button_4"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -214,8 +135,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_10"
+                        <Button
+                            android:id="@+id/button_5"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -236,8 +157,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_11"
+                        <Button
+                            android:id="@+id/button_6"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -250,8 +171,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_12"
+                        <Button
+                            android:id="@+id/button_7"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -264,8 +185,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_13"
+                        <Button
+                            android:id="@+id/button_8"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -278,8 +199,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_14"
+                        <Button
+                            android:id="@+id/button_9"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -293,8 +214,87 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_15"
+                        <Button
+                            android:id="@+id/button_10"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/button_11"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/button_12"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/button_13"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/button_14"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/button_15"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -315,8 +315,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_16"
+                        <Button
+                            android:id="@+id/button_16"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -329,8 +329,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_17"
+                        <Button
+                            android:id="@+id/button_17"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -343,8 +343,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_18"
+                        <Button
+                            android:id="@+id/button_18"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -357,8 +357,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_19"
+                        <Button
+                            android:id="@+id/button_19"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -372,8 +372,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_20"
+                        <Button
+                            android:id="@+id/button_20"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -394,8 +394,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_21"
+                        <Button
+                            android:id="@+id/button_21"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -408,8 +408,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_22"
+                        <Button
+                            android:id="@+id/button_22"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -422,8 +422,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_23"
+                        <Button
+                            android:id="@+id/button_23"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -436,8 +436,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_24"
+                        <Button
+                            android:id="@+id/button_24"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -451,8 +451,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_25"
+                        <Button
+                            android:id="@+id/button_25"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"

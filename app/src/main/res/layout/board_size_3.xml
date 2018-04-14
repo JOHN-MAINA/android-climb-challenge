@@ -25,11 +25,11 @@
                 android:background="@color/colorPrimary"
                 android:orientation="vertical">
 
-                <TextView
-                    style="@style/MainTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/main_title" />
+                <!--<TextView-->
+                    <!--style="@style/MainTitle"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/main_title" />-->
 
                 <TextView
                     style="@style/SubTitles"
@@ -78,8 +78,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_1"
+                        <Button
+                            android:id="@+id/button_1"
                             style="@style/BoardCell"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -92,8 +92,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_2"
+                        <Button
+                            android:id="@+id/button_2"
                             style="@style/BoardCell"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -107,8 +107,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_3"
+                        <Button
+                            android:id="@+id/button_3"
                             style="@style/BoardCell"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -130,8 +130,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_4"
+                        <Button
+                            android:id="@+id/button_4"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
@@ -144,8 +144,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_5"
+                        <Button
+                            android:id="@+id/button_5"
                             style="@style/BoardCell"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -159,8 +159,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_6"
+                        <Button
+                            android:id="@+id/button_6"
                             style="@style/BoardCell"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -181,8 +181,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_7"
+                        <Button
+                            android:id="@+id/button_7"
                             style="@style/BoardCell"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -195,8 +195,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_8"
+                        <Button
+                            android:id="@+id/button_8"
                             style="@style/BoardCell"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -210,8 +210,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/text_9"
+                        <Button
+                            android:id="@+id/button_9"
                             style="@style/BoardCell"
                             android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
