@@ -26,11 +26,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        if(hasFocus){
-        }
-    }
 
     public void startGame(View v) {
         Intent board3 = new Intent(this, BoardSize3.class);
@@ -51,15 +46,26 @@ public class MainActivity extends AppCompatActivity {
             String toastText = levelText + " : " +markerText;
 
             if (levelText.equals(this.getString(R.string.hard_level))){
+
+                if (markerText.equals(this.getString(R.string.x_marker))){
+                    board5.putExtra("userLabel", "X");
+                } else {
+                    board5.putExtra("userLabel", "O");
+                }
+
                 //start 5 * 5 board game
                 startActivity(board5);
             } else {
+
+                if (markerText.equals(this.getString(R.string.x_marker))){
+                    board3.putExtra("userLabel", "X");
+                } else {
+                    board3.putExtra("userLabel", "O");
+                }
+
                 //Start 3 * 3 board game
                 startActivity(board3);
             }
-
-            this.showToast(toastText);
-
 
         }else {
 

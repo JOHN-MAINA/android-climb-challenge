@@ -17,9 +17,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.jqhn.climbchallenge.BoardSize3" />
+        <activity
+            android:name="com.example.jqhn.climbchallenge.BoardSize3"
+            android:screenOrientation="portrait"/>
 
-        <activity android:name="com.example.jqhn.climbchallenge.BoardSize5" />
+        <activity
+            android:name="com.example.jqhn.climbchallenge.BoardSize5"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

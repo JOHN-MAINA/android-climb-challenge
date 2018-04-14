@@ -79,10 +79,11 @@
                         android:layout_weight="1">
 
                         <TextView
-                            style="@style/ScoreText"
+                            android:id="@+id/text_1"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -92,10 +93,11 @@
                         android:layout_weight="1">
 
                         <TextView
-                            style="@style/ScoreText"
+                            android:id="@+id/text_2"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -105,10 +107,11 @@
                         android:layout_weight="1">
 
                         <TextView
-                            style="@style/ScoreText"
+                            android:id="@+id/text_3"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -118,82 +121,11 @@
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/text_4"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            style="@style/ScoreText"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            style="@style/ScoreText"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            style="@style/ScoreText"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            style="@style/ScoreText"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent" />
 
                     </LinearLayout>
 
@@ -204,10 +136,11 @@
                         android:layout_weight="1">
 
                         <TextView
-                            style="@style/ScoreText"
+                            android:id="@+id/text_5"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -225,10 +158,11 @@
                         android:layout_weight="1">
 
                         <TextView
-                            style="@style/ScoreText"
+                            android:id="@+id/text_6"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -238,10 +172,11 @@
                         android:layout_weight="1">
 
                         <TextView
-                            style="@style/ScoreText"
+                            android:id="@+id/text_7"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -251,10 +186,11 @@
                         android:layout_weight="1">
 
                         <TextView
-                            style="@style/ScoreText"
+                            android:id="@+id/text_8"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -264,82 +200,11 @@
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/text_9"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            style="@style/ScoreText"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            style="@style/ScoreText"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            style="@style/ScoreText"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            style="@style/ScoreText"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/BoardCells"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent" />
 
                     </LinearLayout>
 
@@ -350,10 +215,11 @@
                         android:layout_weight="1">
 
                         <TextView
-                            style="@style/ScoreText"
+                            android:id="@+id/text_10"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -371,10 +237,11 @@
                         android:layout_weight="1">
 
                         <TextView
-                            style="@style/ScoreText"
+                            android:id="@+id/text_11"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -384,10 +251,11 @@
                         android:layout_weight="1">
 
                         <TextView
-                            style="@style/ScoreText"
+                            android:id="@+id/text_12"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -397,10 +265,11 @@
                         android:layout_weight="1">
 
                         <TextView
-                            style="@style/ScoreText"
+                            android:id="@+id/text_13"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -410,9 +279,11 @@
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/text_14"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent" />
 
                     </LinearLayout>
 
@@ -423,10 +294,169 @@
                         android:layout_weight="1">
 
                         <TextView
-                            style="@style/ScoreText"
+                            android:id="@+id/text_15"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/text_16"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/text_17"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/text_18"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/text_19"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/text_20"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/text_21"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/text_22"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/text_23"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/text_24"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/BoardCells"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/text_25"
+                            style="@style/BoardCell"
+                            android:onClick="onTextViewClicked"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
                     </LinearLayout>
 
                 </LinearLayout>
