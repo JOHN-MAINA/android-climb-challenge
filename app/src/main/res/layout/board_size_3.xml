@@ -43,6 +43,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/human_score"
                         style="@style/ScoreText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -50,11 +51,12 @@
                         android:text="@string/your_score" />
 
                     <TextView
+                        android:id="@+id/ai_score"
                         style="@style/ScoreText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/your_score" />
+                        android:text="@string/computer_score" />
 
                 </LinearLayout>
 

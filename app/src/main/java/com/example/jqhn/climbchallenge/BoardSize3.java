@@ -2,12 +2,15 @@ package com.example.jqhn.climbchallenge;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by jqhn on 4/10/18.
@@ -15,10 +18,11 @@ import android.widget.Toast;
 
 public class BoardSize3 extends AppCompatActivity {
 
-    String myLabel;
-    String humanLabel;
+    Player humanPlayer;
+    Player compPlayer;
 
     int humanScore = 0; //Human score
+
     int myScore = 0; //Computer score
 
     Context context;
@@ -42,21 +46,24 @@ public class BoardSize3 extends AppCompatActivity {
 
         setContentView(R.layout.board_size_3);
 
+        //Initialize Board values
+        this.initializeBoardValues();
+
         context = getApplicationContext();
 
 
         Intent intent = getIntent();
 
-        String userLabel = intent.getStringExtra("userLabel");
-        this.humanLabel =  userLabel;
+        String humanLabel =  intent.getStringExtra("userLabel");
 
         if (humanLabel.equals("X")){
-            myLabel = "O";
+            humanPlayer = new Player("X", 0);
+            compPlayer = new Player("O", 0);
         } else {
-            myLabel = "X";
+            humanPlayer = new Player("O", 0);
+            compPlayer = new Player("X", 0);
         }
 
-        this.showToast("Your label is: " + userLabel);
     }
 
     public void computerPlay(){
@@ -70,6 +77,25 @@ public class BoardSize3 extends AppCompatActivity {
         humansTurn = true;
     }
 
+    public void initializeBoardValues(){
+        for (int row = 0; row < boardValues.length; row++){
+            for (int col = 0; col < boardValues[row].length; col++){
+                boardValues[row][col] = "null";
+            }
+        }
+    }
+
+    public void showScoreBoard(){
+        TextView humanScoreLabel = findViewById(R.id.human_score);
+        TextView aiScoreLabel = findViewById(R.id.ai_score);
+        String humanLabel = "Your Score " + humanPlayer.score;
+        String aiLabel = "Computer Score " + compPlayer.score;
+
+        humanScoreLabel.setText(humanLabel);
+        aiScoreLabel.setText(aiLabel);
+
+    }
+
     public void onTextViewClicked(View v) {
 
         if(humansTurn){
@@ -77,17 +103,23 @@ public class BoardSize3 extends AppCompatActivity {
             String id = getResources().getResourceEntryName(v.getId());
 
             for (int row = 0; row < 3; row++){
-                for (int col = 0; col < 3; col++){
+                for (int col = 0; col < btnIds[row].length; col++){
+
                     if(id.equals(btnIds[row][col])){
-                        if(btnIds[row][col] != null) {
-                            ((Button) v).setText(humanLabel);
+
+                        if(boardValues[row][col].equals("null")) {
+                            ((Button) v).setText(humanPlayer.marker);
 
                             //Initialize the corresponding array cell with the human label
-                            boardValues[row][col] = humanLabel;
+                            boardValues[row][col] = humanPlayer.marker;
 
                             //Check if the human won
-                            if(this.wasThereAWin(humanLabel)){
+                            if(this.wasThereAWin(humanPlayer.marker)){
                                 //Add human score and reset the board
+                                this.showToast("You Won!");
+                                this.resetBoard();
+                                humanPlayer.score += 1;
+                                showScoreBoard();
 
                             } else {
                                 //Prevent human from playing until the computer has played
@@ -103,6 +135,7 @@ public class BoardSize3 extends AppCompatActivity {
                                 }
                             }
                         }
+                        break;
                     }
                 }
             }
@@ -119,15 +152,53 @@ public class BoardSize3 extends AppCompatActivity {
         toast.show();
     }
 
-    public boolean possibleWinningMove(String currPlayerLabel) {
+    public List<Cell> emptySlots(){
+        List<Cell> availableSlots = new ArrayList<>();
+        for (int i = 0; i < boardValues.length; i++){
+            for (int j = 0; j < boardValues[i].length; j++){
+                if (boardValues[i][j].equals("null")){
+                    availableSlots.add(new Cell(i, j));
+                }
+            }
+        }
 
-
-        return false;
+        return availableSlots;
     }
 
-    public void counterPossibleForOponent(){}
+    public boolean wasThereAWin(String currentPlayerMarker){
+        boolean result = false;
+        if(boardValues[0][0].equals(currentPlayerMarker) && boardValues[0][1].equals(currentPlayerMarker) && boardValues[0][2].equals(currentPlayerMarker) ||
+                boardValues[1][0].equals(currentPlayerMarker) && boardValues[1][1].equals(currentPlayerMarker) && boardValues[1][2].equals(currentPlayerMarker) ||
+                boardValues[2][0].equals(currentPlayerMarker) && boardValues[2][1].equals(currentPlayerMarker) && boardValues[2][2].equals(currentPlayerMarker) ||
+                //Diagonals
+                boardValues[0][0].equals(currentPlayerMarker) && boardValues[1][1].equals(currentPlayerMarker) && boardValues[2][2].equals(currentPlayerMarker) ||
+                boardValues[0][2].equals(currentPlayerMarker) && boardValues[1][1].equals(currentPlayerMarker) && boardValues[2][0].equals(currentPlayerMarker) ||
+                //Columns
+                boardValues[0][0].equals(currentPlayerMarker) && boardValues[1][0].equals(currentPlayerMarker) && boardValues[2][0].equals(currentPlayerMarker) ||
+                boardValues[0][1].equals(currentPlayerMarker) && boardValues[1][1].equals(currentPlayerMarker) && boardValues[2][1].equals(currentPlayerMarker) ||
+                boardValues[0][2].equals(currentPlayerMarker) && boardValues[1][2].equals(currentPlayerMarker) && boardValues[2][2].equals(currentPlayerMarker)
+) {
+            result = true;
+        }
 
-    public void evaluateBestMove(){}
+        return  result;
+    }
+
+    public void minimax(){
+        int result = -1;
+        List<Cell> availableSlots = this.emptySlots();
+
+        // checks for the terminating states such as win, lose, and tie
+        if (wasThereAWin(humanPlayer.marker)){
+            result = -10;
+        }
+        else if (wasThereAWin(compPlayer.marker)){
+            result = 10;
+        }
+        else if (availableSlots.size() == 0){
+            result = 0;
+        }
+    }
 
     public void resetBoard() {
 
@@ -141,28 +212,18 @@ public class BoardSize3 extends AppCompatActivity {
             }
         }
 
-        //Reset board values
-        boardValues = new String[3][3];
+        initializeBoardValues();
         humansTurn = true;
     }
 
-    public boolean wasThereAWin(String currentPlayerLabel) {
-
-        return false;
-    }
-
     public boolean isBoardFilled(){
-
         boolean result = true;
+        List<Cell> emptySlots = this.emptySlots();
 
-        for (int row = 0; row < boardValues.length; row++){
-            for (int col = 0; col < boardValues.length; col++){
-                if(boardValues[row][col] == null){
-                    result = false;
-                    break;
-                }
-            }
+        if(emptySlots.size() != 0) {
+            result = false;
         }
+
         return result;
     }
 }

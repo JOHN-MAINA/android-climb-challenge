@@ -10,4 +10,6 @@
     <string name="start_button">START</string>
     <string name="score_board">SCORE BOARD</string>
     <string name="your_score">Your Score 0</string>
+    <string name="computer_score">Computer Score 0</string>
+
 </resources>
