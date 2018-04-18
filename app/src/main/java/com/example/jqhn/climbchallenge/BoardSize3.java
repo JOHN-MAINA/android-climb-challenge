@@ -66,17 +66,6 @@ public class BoardSize3 extends AppCompatActivity {
 
     }
 
-    public void computerPlay(){
-
-        //Check if there is move with a possible win
-
-
-        //Check if on the next move the opponent has a winning move if yes block else
-
-        //Evaluate the best possible move
-        humansTurn = true;
-    }
-
     public void initializeBoardValues(){
         for (int row = 0; row < boardValues.length; row++){
             for (int col = 0; col < boardValues[row].length; col++){
@@ -107,14 +96,14 @@ public class BoardSize3 extends AppCompatActivity {
 
                     if(id.equals(btnIds[row][col])){
 
-                        if(boardValues[row][col].equals("null")) {
+                        if(this.boardValues[row][col].equals("null")) {
                             ((Button) v).setText(humanPlayer.marker);
 
                             //Initialize the corresponding array cell with the human label
-                            boardValues[row][col] = humanPlayer.marker;
+                            this.boardValues[row][col] = humanPlayer.marker;
 
                             //Check if the human won
-                            if(this.wasThereAWin(humanPlayer.marker)){
+                            if(this.wasThereAWin(humanPlayer.marker, this.boardValues)){
                                 //Add human score and reset the board
                                 this.showToast("You Won!");
                                 this.resetBoard();
@@ -130,7 +119,7 @@ public class BoardSize3 extends AppCompatActivity {
                                     this.computerPlay();
                                 } else {
                                     // Its was a draw and reset the board
-                                    this.showToast("Its was a draw, resetting the board");
+                                    this.showToast("Its was a draw");
                                     this.resetBoard();
                                 }
                             }
@@ -152,6 +141,57 @@ public class BoardSize3 extends AppCompatActivity {
         toast.show();
     }
 
+    public void computerPlay(){
+
+        //Check if there is move with a possible win
+        Move winningMove = this.checkPossibleWinningMove(compPlayer.marker);
+
+//        if(winningMove.col != -1 && winningMove.row != -1){
+//            showToast("Before Checking if there is a possible winning move for the comp" + winningMove.col + ":" + winningMove.row);
+//            //A winning move was found
+//            playAMove(winningMove);
+//        }else {
+//            showToast("Checking if there is a possible winning move for the human");
+//            //Check if on the next move the opponent has a winning move if yes block else
+//            Move oponentWinningMove = this.checkPossibleWinningMove(humanPlayer.marker);
+//            if(oponentWinningMove.col != -1 && oponentWinningMove.row != -1){
+//                playAMove(oponentWinningMove);
+//            } else {
+//                //Evaluate the best possible move
+//                minimax();
+//            }
+//
+//        }
+        humansTurn = true;
+    }
+
+    public void playAMove(Move move){
+        Button btnToPlay = null;
+        if (move.row == 0 && move.col == 0){
+            btnToPlay = findViewById(R.id.button_1);
+        } else if(move.row == 0 && move.col == 1) {
+            btnToPlay = findViewById(R.id.button_2);
+        }else if(move.row == 0 && move.col == 2) {
+            btnToPlay = findViewById(R.id.button_3);
+        }else if(move.row == 1 && move.col == 0) {
+            btnToPlay = findViewById(R.id.button_4);
+        }else if(move.row == 1 && move.col == 1) {
+            btnToPlay = findViewById(R.id.button_5);
+        }else if(move.row == 1 && move.col == 2) {
+            btnToPlay = findViewById(R.id.button_6);
+        }else if(move.row == 2 && move.col == 0) {
+            btnToPlay = findViewById(R.id.button_7);
+        }else if(move.row == 2 && move.col == 1) {
+            btnToPlay = findViewById(R.id.button_8);
+        }else if(move.row == 2 && move.col == 2) {
+            btnToPlay = findViewById(R.id.button_9);
+        }
+
+        if(btnToPlay != null){
+            btnToPlay.setText(compPlayer.marker);
+        }
+    }
+
     public List<Cell> emptySlots(){
         List<Cell> availableSlots = new ArrayList<>();
         for (int i = 0; i < boardValues.length; i++){
@@ -165,18 +205,18 @@ public class BoardSize3 extends AppCompatActivity {
         return availableSlots;
     }
 
-    public boolean wasThereAWin(String currentPlayerMarker){
+    public boolean wasThereAWin(String currentPlayerMarker, String [][] currBoardValues){
         boolean result = false;
-        if(boardValues[0][0].equals(currentPlayerMarker) && boardValues[0][1].equals(currentPlayerMarker) && boardValues[0][2].equals(currentPlayerMarker) ||
-                boardValues[1][0].equals(currentPlayerMarker) && boardValues[1][1].equals(currentPlayerMarker) && boardValues[1][2].equals(currentPlayerMarker) ||
-                boardValues[2][0].equals(currentPlayerMarker) && boardValues[2][1].equals(currentPlayerMarker) && boardValues[2][2].equals(currentPlayerMarker) ||
+        if(currBoardValues[0][0].equals(currentPlayerMarker) && currBoardValues[0][1].equals(currentPlayerMarker) && currBoardValues[0][2].equals(currentPlayerMarker) ||
+                currBoardValues[1][0].equals(currentPlayerMarker) && currBoardValues[1][1].equals(currentPlayerMarker) && currBoardValues[1][2].equals(currentPlayerMarker) ||
+                currBoardValues[2][0].equals(currentPlayerMarker) && currBoardValues[2][1].equals(currentPlayerMarker) && currBoardValues[2][2].equals(currentPlayerMarker) ||
                 //Diagonals
-                boardValues[0][0].equals(currentPlayerMarker) && boardValues[1][1].equals(currentPlayerMarker) && boardValues[2][2].equals(currentPlayerMarker) ||
-                boardValues[0][2].equals(currentPlayerMarker) && boardValues[1][1].equals(currentPlayerMarker) && boardValues[2][0].equals(currentPlayerMarker) ||
+                currBoardValues[0][0].equals(currentPlayerMarker) && currBoardValues[1][1].equals(currentPlayerMarker) && currBoardValues[2][2].equals(currentPlayerMarker) ||
+                currBoardValues[0][2].equals(currentPlayerMarker) && currBoardValues[1][1].equals(currentPlayerMarker) && currBoardValues[2][0].equals(currentPlayerMarker) ||
                 //Columns
-                boardValues[0][0].equals(currentPlayerMarker) && boardValues[1][0].equals(currentPlayerMarker) && boardValues[2][0].equals(currentPlayerMarker) ||
-                boardValues[0][1].equals(currentPlayerMarker) && boardValues[1][1].equals(currentPlayerMarker) && boardValues[2][1].equals(currentPlayerMarker) ||
-                boardValues[0][2].equals(currentPlayerMarker) && boardValues[1][2].equals(currentPlayerMarker) && boardValues[2][2].equals(currentPlayerMarker)
+                currBoardValues[0][0].equals(currentPlayerMarker) && currBoardValues[1][0].equals(currentPlayerMarker) && currBoardValues[2][0].equals(currentPlayerMarker) ||
+                currBoardValues[0][1].equals(currentPlayerMarker) && currBoardValues[1][1].equals(currentPlayerMarker) && currBoardValues[2][1].equals(currentPlayerMarker) ||
+                currBoardValues[0][2].equals(currentPlayerMarker) && currBoardValues[1][2].equals(currentPlayerMarker) && currBoardValues[2][2].equals(currentPlayerMarker)
 ) {
             result = true;
         }
@@ -184,20 +224,56 @@ public class BoardSize3 extends AppCompatActivity {
         return  result;
     }
 
-    public void minimax(){
+    public int minimax(){
         int result = -1;
         List<Cell> availableSlots = this.emptySlots();
 
         // checks for the terminating states such as win, lose, and tie
-        if (wasThereAWin(humanPlayer.marker)){
+        if (wasThereAWin(humanPlayer.marker, boardValues)){
             result = -10;
         }
-        else if (wasThereAWin(compPlayer.marker)){
+        else if (wasThereAWin(compPlayer.marker, boardValues)){
             result = 10;
         }
         else if (availableSlots.size() == 0){
             result = 0;
+        } else {
+            List<Move> moves = new ArrayList<> ();
+            for (Cell cell: availableSlots) {
+                moves.add(new Move(cell.row, cell.col));
+            }
         }
+
+        return result;
+    }
+
+    public Move checkPossibleWinningMove(String currentPLayerMaker){
+
+        Move toPlayMove = new Move(-1, -1);
+        List<Cell> emptySlots = this.emptySlots();
+        String toPrint = "";
+        for (Cell cell: emptySlots){
+            String [][] newBoardVals = this.boardValues;
+            newBoardVals[cell.row][cell.col] = currentPLayerMaker;
+
+            for(int row = 0; row < this.boardValues.length; row++){
+                for(int col = 0; col < this.boardValues[row].length; col++){
+                    toPrint += boardValues[row][col];
+                }
+                toPrint += "\n";
+            }
+//            if(wasThereAWin(currentPLayerMaker, newBoardVals)){
+////                toPlayMove.row = cell.row;
+////                toPlayMove.col = cell.col;
+//                showToast("There was a winning move");
+//                break;
+//            }
+        }
+
+        showToast(toPrint);
+
+
+        return toPlayMove;
     }
 
     public void resetBoard() {
